@@ -1,0 +1,16 @@
+.linear-grad{
+    -fx-background-color: linear-gradient(to bottom left, #371897, #6F4CBB);
+}
+
+.login-button{
+    -fx-background-color: #431FA0;
+    -fx-text-fill: #ffffff;
+}
+
+.login-button:hover{
+    -fx-text-fill: #6F4CBB;
+}
+
+.login-button:pressed{
+    -fx-text-fill: #371897;
+}
