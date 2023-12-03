@@ -1,0 +1,98 @@
+
+.pane-label{
+    -fx-background-radius: 8px;
+    -fx-background-color: #6a42e7;
+}
+
+.textfield{
+    -fx-background-color: white;
+    -fx-border-color: #6F4CBB;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+
+.textarea{
+    -fx-background-color: transparent;
+    -fx-border-color: #6F4CBB;
+    -fx-border-radius: 2px;
+    -fx-background-radius: 2px;
+}
+
+.textarea:focused{
+    -fx-focus-color: transparent;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.combobox{
+    -fx-background-color: white;
+    -fx-border-color: #6F4CBB;
+    -fx-border-radius: 10px;
+}
+
+.buttonD{
+    -fx-background-color: #6F4CBB;
+    -fx-border-color: #6F4CBB;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+
+.buttonGeneral{
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+
+.buttonD:hover{
+    -fx-cursor: hand;
+    -fx-text-fill: black;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-background-color: white;
+    -fx-border-color: black;
+}
+
+.pickDate{
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-border-radius: 7px;
+    -fx-background-radius: 7px;
+}
+
+.pickDate:hover{
+    -fx-cursor: hand;
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-border-radius: 7px;
+    -fx-background-radius: 7px;
+}
+
+.buttonD:focused{
+    -fx-text-fill: black;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-background-color: white;
+    -fx-border-color: black;
+}
+
+.button-regresar{
+    -fx-background-color: black;
+    -fx-border-color: black;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+
+.button-regresar:hover{
+    -fx-cursor: hand;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-background-color: #b5b5b5;
+    -fx-border-color: black;
+}
+
+.button-regresar:focused{
+    -fx-cursor: hand;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-background-color: #b1b5b6;
+    -fx-border-color: black;
+}

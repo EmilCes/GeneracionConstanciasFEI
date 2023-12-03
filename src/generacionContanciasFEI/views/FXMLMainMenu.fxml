@@ -10,7 +10,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1150.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.FXMLMainMenu">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1150.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.FXMLMainMenuController">
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
@@ -18,7 +18,7 @@
                <left>
                   <AnchorPane prefHeight="555.0" prefWidth="211.0" BorderPane.alignment="CENTER">
                      <children>
-                        <AnchorPane layoutX="-15.0" layoutY="25.0" prefHeight="555.0" prefWidth="211.0" styleClass="nav-form" stylesheets="@css/FXMLMainMenu.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane fx:id="apAdministrativeStaff" layoutX="-15.0" layoutY="25.0" prefHeight="555.0" prefWidth="211.0" styleClass="nav-form" stylesheets="@css/FXMLMainMenu.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
                               <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="69.0" layoutY="125.0" size="7em" />
                               <Label layoutX="55.0" layoutY="137.0" text="Administrador" textFill="WHITE">
@@ -26,23 +26,23 @@
                                     <Font size="17.0" />
                                  </font>
                               </Label>
-                              <Label alignment="CENTER" layoutX="4.0" layoutY="160.0" prefHeight="26.0" prefWidth="199.0" text="Jesús Manuel" textFill="WHITE">
+                              <Label fx:id="lbAdministrativeName" alignment="CENTER" layoutX="4.0" layoutY="160.0" prefHeight="26.0" prefWidth="199.0" text="Jesús Manuel" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="20.0" />
                                  </font>
                               </Label>
                               <Line endX="100.0" layoutX="106.0" layoutY="195.0" scaleX="0.8" startX="-100.0" stroke="WHITE" />
-                              <Button fx:id="btnCobro" layoutX="16.0" layoutY="254.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@css/FXMLMainMenu.css" text="Administrar cobro">
+                              <Button fx:id="btnCobro" layoutX="16.0" layoutY="254.0" mnemonicParsing="false" onAction="#clickUpdateDigitalSign" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@css/FXMLMainMenu.css" text="Renovar Firma Digital">
                                  <graphic>
                                     <FontAwesomeIcon fill="WHITE" glyphName="MONEY" size="1.5em" />
                                  </graphic>
                               </Button>
-                              <Button fx:id="btnTarjetas" layoutX="16.0" layoutY="289.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@css/FXMLMainMenu.css" text="Administrar Tarjetas">
+                              <Button fx:id="btnTarjetas" layoutX="16.0" layoutY="289.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@css/FXMLMainMenu.css" text="Visualizar Constancias">
                                  <graphic>
                                     <FontAwesomeIcon fill="WHITE" glyphName="CHECK" size="1.5em" />
                                  </graphic>
                               </Button>
-                              <Button layoutX="14.0" layoutY="514.0" mnemonicParsing="false" stylesheets="@css/FXMLMainMenu.css">
+                              <Button layoutX="14.0" layoutY="514.0" mnemonicParsing="false" onAction="#clickLogout" stylesheets="@css/FXMLMainMenu.css">
                                  <graphic>
                                     <FontAwesomeIcon fill="WHITE" glyphName="SIGN_OUT" size="1.5em" />
                                  </graphic>
@@ -56,14 +56,54 @@
                                     <Font size="14.0" />
                                  </font>
                               </Label>
-                              <Button fx:id="btnEspacios" layoutX="16.0" layoutY="219.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@css/FXMLMainMenu.css" text="Asignar Espacios">
+                              <Button layoutX="16.0" layoutY="219.0" mnemonicParsing="false" onAction="#clickTeachers" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@css/FXMLMainMenu.css" text="Profesores">
                                  <graphic>
                                     <FontAwesomeIcon fill="WHITE" glyphName="CAR" size="1.5em" />
                                  </graphic>
                               </Button>
-                              <Button fx:id="btnPrecios" layoutX="16.0" layoutY="324.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@css/FXMLMainMenu.css" text="Configurar Precios">
+                              <Button layoutX="16.0" layoutY="324.0" mnemonicParsing="false" onAction="#clickAdministartiveStaff" prefHeight="35.0" prefWidth="181.0" styleClass="nav-btn" stylesheets="@css/FXMLMainMenu.css" text="Personal Administrativo">
                                  <graphic>
                                     <FontAwesomeIcon fill="WHITE" glyphName="GEAR" size="1.5em" />
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="apTeacher" prefHeight="555.0" prefWidth="211.0" styleClass="nav-form" stylesheets="@css/FXMLMainMenu.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="69.0" layoutY="125.0" size="7em" />
+                              <Label layoutX="73.0" layoutY="138.0" text="Docente" textFill="WHITE">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lbTeacherName" alignment="CENTER" layoutX="4.0" layoutY="160.0" prefHeight="26.0" prefWidth="199.0" text="Jesús Manuel" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="100.0" layoutX="106.0" layoutY="195.0" scaleX="0.8" startX="-100.0" stroke="WHITE" />
+                              <Button fx:id="btnCobro1" layoutX="16.0" layoutY="254.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@css/FXMLMainMenu.css" text="Configurar Perfil">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="GEAR" size="1.5em" />
+                                 </graphic>
+                              </Button>
+                              <Button layoutX="14.0" layoutY="514.0" mnemonicParsing="false" onAction="#clickLogout" stylesheets="@css/FXMLMainMenu.css">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="SIGN_OUT" size="1.5em" />
+                                 </graphic>
+                                 <styleClass>
+                                    <String fx:value="logout" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                              </Button>
+                              <Label layoutX="54.0" layoutY="520.0" text="Salir" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Button layoutX="16.0" layoutY="219.0" mnemonicParsing="false" onAction="#clickGenerateRecord" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@css/FXMLMainMenu.css" text="Generar Constancia">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="CAR" size="1.5em" />
                                  </graphic>
                               </Button>
                            </children>
@@ -72,7 +112,7 @@
                   </AnchorPane>
                </left>
                <center>
-                  <AnchorPane fx:id="apMenuPrincipal" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                  <AnchorPane fx:id="apMainMenu" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                      <children>
                         <Pane prefHeight="200.0" prefWidth="200.0" stylesheets="@css/FXMLMainMenu.css" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0">
                            <children>

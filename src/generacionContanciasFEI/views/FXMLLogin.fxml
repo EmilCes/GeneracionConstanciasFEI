@@ -29,8 +29,8 @@
          <center>
             <Pane prefHeight="539.0" prefWidth="389.0" style="-fx-background-color: White;" BorderPane.alignment="CENTER">
                <children>
-                  <TextField fx:id="tfEmail" layoutX="74.0" layoutY="172.0" prefHeight="45.0" prefWidth="270.0" promptText="Correo Institucional" />
-                  <PasswordField fx:id="tbxPassword" layoutX="74.0" layoutY="268.0" prefHeight="45.0" prefWidth="270.0" promptText="Contraseña" />
+                  <TextField fx:id="tfUsername" layoutX="74.0" layoutY="172.0" prefHeight="45.0" prefWidth="270.0" promptText="Nombre de Usuario" />
+                  <PasswordField fx:id="tfPassword" layoutX="74.0" layoutY="268.0" prefHeight="45.0" prefWidth="270.0" promptText="Contraseña" />
                   <Button layoutX="230.0" layoutY="403.0" mnemonicParsing="false" onAction="#clickLogin" prefHeight="47.0" prefWidth="117.0" styleClass="login-button" stylesheets="@css/Login.css" text="Iniciar Sesión" />
                   <Label layoutX="110.0" layoutY="77.0" text="Iniciar Sesión">
                      <font>

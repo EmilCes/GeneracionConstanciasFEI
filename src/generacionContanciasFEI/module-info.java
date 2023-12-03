@@ -4,6 +4,12 @@ module com.uv.generacionConstanciasFEI {
 
     requires org.controlsfx.controls;
     requires org.kordamp.ikonli.javafx;
+    requires java.sql;
+    requires mysql.connector.java;
+    requires org.apache.poi.ooxml;
+    requires kernel;
+    requires layout;
+    requires itextpdf;
 
     exports main;
     exports controllers;

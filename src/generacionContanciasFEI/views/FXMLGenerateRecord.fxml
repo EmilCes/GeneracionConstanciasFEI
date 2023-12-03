@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?x <?xml version="1.0" encoding="UTF-8"?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="apRecordsForm" prefHeight="600.0" prefWidth="889.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.FXMLGenerateRecordController">
+    <children>
+        <Pane layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="889.0" stylesheets="@css/FXMLMainMenu.css" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="75.0">
+            <children>
+                <RadioButton fx:id="rbProject" layoutX="51.0" layoutY="85.0" mnemonicParsing="false" selected="true" text="Proyecto de Campo">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="tgRecords" />
+                    </toggleGroup>
+                </RadioButton>
+                <Pane layoutX="41.0" layoutY="28.0" prefHeight="40.0" prefWidth="287.0" styleClass="pane-label" stylesheets="@css/General.css">
+                    <children>
+                        <Label layoutX="35.0" layoutY="6.0" text="Trabajos Académicos" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+                <RadioButton fx:id="rbEducationalExperience" layoutX="212.0" layoutY="85.0" mnemonicParsing="false" text="Experiencias Educativas" toggleGroup="$tgRecords" />
+                <Pane fx:id="pnProjects" layoutX="397.0" layoutY="40.0" prefHeight="439.0" prefWidth="405.0" stylesheets="@css/FXMLMainMenu.css">
+                    <children>
+                        <Button fx:id="btnDonwloadRecord" disable="true" layoutX="127.0" layoutY="373.0" mnemonicParsing="false" onAction="#clickDownloadRecord" prefHeight="50.0" prefWidth="155.0" styleClass="buttonD" stylesheets="@css/General.css" text="Descargar Constancia" textFill="WHITE" />
+                      <TableView fx:id="tvProjects" layoutX="57.0" layoutY="106.0" prefHeight="259.0" prefWidth="306.0">
+                          <columns>
+                              <TableColumn fx:id="tcProjectsName" editable="false" prefWidth="305.0" sortable="false" text="Proyectos de Campo" />
+                          </columns>
+                      </TableView>
+                  <TextField fx:id="tfProjectDoneName" layoutX="78.0" layoutY="48.0" prefHeight="29.0" prefWidth="268.0" promptText="Nombre del Proyecto de Campo" styleClass="textfield" stylesheets="@css/General.css" />
+                    </children>
+                    <styleClass>
+                        <String fx:value="shadow" />
+                        <String fx:value="white-bg" />
+                    </styleClass>
+                </Pane>
+            <Pane fx:id="pnEducativeExperiences" layoutX="397.0" layoutY="40.0" prefHeight="439.0" prefWidth="405.0" stylesheets="@css/FXMLMainMenu.css" visible="false">
+               <children>
+                  <Button fx:id="btnDonwloadEducativeExperienceRecord" disable="true" layoutX="127.0" layoutY="373.0" mnemonicParsing="false" onAction="#clickDownloadEducativeExperienceRecord" prefHeight="50.0" prefWidth="155.0" styleClass="buttonD" stylesheets="@css/General.css" text="Descargar Constancia" textFill="WHITE" />
+                  <TableView fx:id="tvEducativeExperiences" layoutX="57.0" layoutY="106.0" prefHeight="259.0" prefWidth="306.0">
+                     <columns>
+                        <TableColumn fx:id="tcEducativeExperiences" editable="false" prefWidth="305.0" sortable="false" text="Experiencias Educativas" />
+                     </columns>
+                  </TableView>
+                  <TextField fx:id="tfEducativeExperience" layoutX="78.0" layoutY="48.0" prefHeight="29.0" prefWidth="268.0" promptText="Nombre de la Experiencia Educativa" styleClass="textfield" stylesheets="@css/General.css" />
+               </children>
+               <styleClass>
+                  <String fx:value="shadow" />
+                  <String fx:value="white-bg" />
+               </styleClass>
+            </Pane>
+            </children>
+            <styleClass>
+                <String fx:value="white-bg" />
+                <String fx:value="shadow" />
+            </styleClass>
+        </Pane>
+        <Label layoutX="26.0" layoutY="20.0" text="Generar Constancia">
+            <font>
+                <Font size="48.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

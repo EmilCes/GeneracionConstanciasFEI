@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?x <?xml version="1.0" encoding="UTF-8"?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="apConsultAdministrativeStaff" prefHeight="600.0" prefWidth="889.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.FXMLConsultAdministrativeStaffController">
+    <children>
+        <Pane layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="889.0" stylesheets="@css/FXMLMainMenu.css" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="75.0">
+            <children>
+                <Pane layoutX="46.0" layoutY="87.0" prefHeight="38.0" prefWidth="184.0" styleClass="pane-label">
+                    <children>
+                        <Label layoutX="16.0" layoutY="5.0" text="Fecha de Inicio" textFill="WHITE">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                    </children>
+
+                </Pane>
+                <Button fx:id="btnRegisterAdministrativeStaff" layoutX="475.0" layoutY="279.0" mnemonicParsing="false" onAction="#clickRegisterAdministrativeStaff" prefHeight="40.0" prefWidth="130.0" styleClass="buttonD" stylesheets="@css/General.css" text="Registrar Personal" textFill="WHITE">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Pane layoutX="46.0" layoutY="281.0" prefHeight="38.0" prefWidth="184.0" styleClass="pane-label">
+                    <children>
+                        <Label layoutX="17.0" layoutY="4.0" text="Observaciones" textFill="WHITE">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+                <Label layoutX="684.0" layoutY="353.0" prefHeight="17.0" prefWidth="141.0" />
+                <TextField fx:id="tfName" layoutX="440.0" layoutY="82.0" prefHeight="33.0" prefWidth="374.0" promptText="Nombre" styleClass="textfield" stylesheets="@css/General.css" />
+                <Button fx:id="btnModifyUser" layoutX="475.0" layoutY="359.0" mnemonicParsing="false" onAction="#clickModifyUser" prefHeight="40.0" prefWidth="130.0" styleClass="buttonD" stylesheets="@css/General.css" text="Modificar" textFill="WHITE">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnDeleteUser" layoutX="663.0" layoutY="359.0" mnemonicParsing="false" onAction="#clickDeleteUser" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: red;" styleClass="buttonGeneral" stylesheets="@css/General.css" text="Eliminar" textFill="WHITE">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <TableView fx:id="tvAdministrativeStaff" layoutX="25.0" layoutY="15.0" prefHeight="465.0" prefWidth="391.0">
+                    <columns>
+                        <TableColumn fx:id="tcAdministrativeStaff" prefWidth="389.99998474121094" text="Personal Administrativo" />
+                    </columns>
+                </TableView>
+                <Pane layoutX="440.0" layoutY="18.0" prefHeight="40.0" prefWidth="198.0" styleClass="pane-label" stylesheets="@css/General.css">
+                    <children>
+                        <Label layoutX="48.0" layoutY="5.0" text="Busqueda" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+                <Pane layoutX="440.0" layoutY="209.0" prefHeight="40.0" prefWidth="198.0" styleClass="pane-label" stylesheets="@css/General.css">
+                    <children>
+                        <Label layoutX="48.0" layoutY="5.0" text="Controles" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+                <Button fx:id="btnSeeUser" layoutX="663.0" layoutY="279.0" mnemonicParsing="false" onAction="#clickSeeUser" prefHeight="40.0" prefWidth="130.0" styleClass="buttonD" stylesheets="@css/General.css" text="Ver Usuario" textFill="WHITE">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+            <Button layoutX="573.0" layoutY="440.0" mnemonicParsing="false" onAction="#clickImportAdministrativeStaff" prefHeight="40.0" prefWidth="130.0" styleClass="buttonD" stylesheets="@css/General.css" text="Importar" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            </children>
+            <styleClass>
+                <String fx:value="white-bg" />
+                <String fx:value="shadow" />
+            </styleClass>
+        </Pane>
+        <Label layoutX="26.0" layoutY="20.0" text="Personal Administartivo">
+            <font>
+                <Font size="48.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

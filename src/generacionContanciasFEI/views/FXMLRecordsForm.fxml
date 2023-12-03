@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?x <?xml version="1.0" encoding="UTF-8"?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="apRecordsForm" prefHeight="600.0" prefWidth="889.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.FXMLRecordsFormController">
+    <children>
+        <Pane layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="889.0" stylesheets="@css/FXMLMainMenu.css" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="75.0">
+            <children>
+            <RadioButton fx:id="rbProject" layoutX="51.0" layoutY="85.0" mnemonicParsing="false" selected="true" text="Proyecto de Campo">
+               <toggleGroup>
+                  <ToggleGroup fx:id="tgRecords" />
+               </toggleGroup>
+            </RadioButton>
+                <Pane layoutX="41.0" layoutY="28.0" prefHeight="40.0" prefWidth="287.0" styleClass="pane-label" stylesheets="@css/General.css">
+                    <children>
+                        <Label layoutX="35.0" layoutY="6.0" text="Trabajos Académicos" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+                <Button fx:id="btnBack" layoutX="138.0" layoutY="442.0" mnemonicParsing="false" onAction="#clickBack" prefHeight="40.0" prefWidth="141.0" styleClass="buttonD" stylesheets="@css/General.css" text="Regresar" textFill="WHITE" />
+            <RadioButton fx:id="rbEducationalExperience" layoutX="212.0" layoutY="85.0" mnemonicParsing="false" text="Experiencias Educativas" toggleGroup="$tgRecords" />
+            <TableView fx:id="tvProjects" layoutX="39.0" layoutY="123.0" prefHeight="301.0" prefWidth="331.0">
+              <columns>
+                <TableColumn fx:id="tcProjectsName" editable="false" prefWidth="329.99999237060547" sortable="false" text="Proyectos de Campo" />
+              </columns>
+            </TableView>
+            <Pane fx:id="pnNewProject" layoutX="397.0" layoutY="40.0" prefHeight="439.0" prefWidth="405.0" stylesheets="@css/FXMLMainMenu.css">
+               <children>
+                      <TextField fx:id="tfProjectDone" layoutX="19.0" layoutY="29.0" prefHeight="33.0" prefWidth="374.0" promptText="Proyecto Realizado" styleClass="textfield" stylesheets="@css/General.css" />
+                      <TextField fx:id="tfDuration" layoutX="19.0" layoutY="82.0" prefHeight="33.0" prefWidth="374.0" promptText="Duración" styleClass="textfield" stylesheets="@css/General.css" />
+                      <TextField fx:id="tfDevelopmentPlace" layoutX="19.0" layoutY="135.0" prefHeight="33.0" prefWidth="374.0" promptText="Lugar de Desarrollo" styleClass="textfield" stylesheets="@css/General.css" />
+                  <TableView fx:id="tvStudents" layoutX="20.0" layoutY="241.0" prefHeight="83.0" prefWidth="375.0">
+                    <columns>
+                      <TableColumn fx:id="tcStudentName" editable="false" prefWidth="374.0000305175781" sortable="false" text="Estudiantes" />
+                    </columns>
+                  </TableView>
+                  <ComboBox fx:id="cbStudents" layoutX="19.0" layoutY="188.0" prefHeight="33.0" prefWidth="200.0" promptText="Estudiante" styleClass="combobox" stylesheets="@css/General.css" />
+                  <Button fx:id="btnNewStudent" layoutX="317.0" layoutY="188.0" mnemonicParsing="false" onAction="#clickNewStudent" prefHeight="33.0" prefWidth="75.0" styleClass="buttonD" stylesheets="@css/General.css" text="Nuevo" textFill="WHITE" />
+                      <Button fx:id="btnRegisteProject" layoutX="275.0" layoutY="366.0" mnemonicParsing="false" onAction="#clickRegisterProject" prefHeight="30.0" prefWidth="120.0" styleClass="buttonD" stylesheets="@css/General.css" text="Registrar Proyecto" textFill="WHITE">
+                     <font>
+                        <Font size="12.0" />
+                     </font></Button>
+                  <Button fx:id="btnAddStudent" disable="true" layoutX="230.0" layoutY="188.0" mnemonicParsing="false" onAction="#clickAddStudent" prefHeight="33.0" prefWidth="75.0" styleClass="buttonD" stylesheets="@css/General.css" text="Añadir" textFill="WHITE" />
+                  <TextArea fx:id="tfImpactObtained" layoutX="19.0" layoutY="344.0" prefHeight="74.0" prefWidth="245.0" promptText="Impacto Obtenido" styleClass="textarea" stylesheets="@css/General.css" />
+               </children>
+               <styleClass>
+                  <String fx:value="shadow" />
+                  <String fx:value="white-bg" />
+               </styleClass>
+            </Pane>
+            <Pane fx:id="pnEducativeExperience" layoutX="407.0" layoutY="50.0" prefHeight="439.0" prefWidth="405.0" stylesheets="@css/FXMLMainMenu.css" visible="false">
+               <children>
+                  <TextField fx:id="tfEducativeExperienceName" layoutX="19.0" layoutY="29.0" prefHeight="33.0" prefWidth="374.0" promptText="Nombre Experiencia Educativa" styleClass="textfield" stylesheets="@css/General.css" />
+                  <TextField fx:id="tfBlock" layoutX="19.0" layoutY="82.0" prefHeight="33.0" prefWidth="374.0" promptText="Bloque" styleClass="textfield" stylesheets="@css/General.css" />
+                  <TextField fx:id="tfSection" layoutX="19.0" layoutY="135.0" prefHeight="33.0" prefWidth="374.0" promptText="Sección" styleClass="textfield" stylesheets="@css/General.css" />
+                  <ComboBox fx:id="cbEducativePrograms" layoutX="19.0" layoutY="241.0" prefHeight="33.0" prefWidth="287.0" promptText="Programa Educativo" styleClass="combobox" stylesheets="@css/General.css" />
+                  <Button fx:id="btnNewEducativeExperience" layoutX="317.0" layoutY="241.0" mnemonicParsing="false" onAction="#clickNewEducativeExperience" prefHeight="33.0" prefWidth="75.0" styleClass="buttonD" stylesheets="@css/General.css" text="Nuevo" textFill="WHITE" />
+                  <Button layoutX="143.0" layoutY="345.0" mnemonicParsing="false" onAction="#clickRegisterExperienceEducative" prefHeight="30.0" prefWidth="120.0" styleClass="buttonD" stylesheets="@css/General.css" text="Registrar Proyecto" textFill="WHITE">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="tfCredits" layoutX="19.0" layoutY="188.0" prefHeight="33.0" prefWidth="374.0" promptText="Creditos" styleClass="textfield" stylesheets="@css/General.css" />
+               </children>
+               <styleClass>
+                  <String fx:value="shadow" />
+                  <String fx:value="white-bg" />
+               </styleClass>
+            </Pane>
+            <TableView fx:id="tvEducativeExperiences" layoutX="49.0" layoutY="133.0" prefHeight="301.0" prefWidth="331.0" visible="false">
+               <columns>
+                  <TableColumn fx:id="tcEducativeExperience" editable="false" prefWidth="329.99999237060547" sortable="false" text="Experiencias Educativas" />
+               </columns>
+            </TableView>
+            </children>
+            <styleClass>
+                <String fx:value="white-bg" />
+                <String fx:value="shadow" />
+            </styleClass>
+        </Pane>
+        <Label layoutX="26.0" layoutY="20.0" text="Registrar Trabajo Académico">
+            <font>
+                <Font size="48.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
