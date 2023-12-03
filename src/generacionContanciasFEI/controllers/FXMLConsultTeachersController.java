@@ -14,6 +14,7 @@ import model.dao.TeacherDAO;
 import model.pojo.Teacher;
 import model.pojo.TeacherResponse;
 import utils.Constants;
+import utils.ImportTeachers;
 import utils.Utilities;
 
 import java.net.URL;
@@ -121,7 +122,7 @@ public class FXMLConsultTeachersController implements Initializable {
 
     }
 
-    @FXML
+    @Deprecated
     public void clickRegisterTeacher(ActionEvent actionEvent) {
         Utilities.changePane(apConsultTeachers, "/views/FXMLTeacherForm.fxml");
     }
@@ -161,6 +162,13 @@ public class FXMLConsultTeachersController implements Initializable {
                         "Hubo un error al eliinar el profesor. Intentálo mas tarde.", Alert.AlertType.ERROR);
             }
         }
+    }
+
+    @FXML
+    public void clickImportTeachers(ActionEvent actionEvent) {
+        ImportTeachers importTeachers = new ImportTeachers();
+        importTeachers.importTeachers();
+        Utilities.changePane(apConsultTeachers, "/views/FXMLConsultTeachers.fxml");
     }
 
 }

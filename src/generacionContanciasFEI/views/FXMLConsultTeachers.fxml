@@ -80,6 +80,11 @@
                   <Font size="14.0" />
                </font>
             </Button>
+            <Button layoutX="568.0" layoutY="433.0" mnemonicParsing="false" onAction="#clickImportTeachers" prefHeight="40.0" prefWidth="141.0" styleClass="buttonD" stylesheets="@css/General.css" text="Importar Profesores" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
         </children>
         <styleClass>
             <String fx:value="white-bg" />

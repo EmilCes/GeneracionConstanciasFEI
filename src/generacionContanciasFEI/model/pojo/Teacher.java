@@ -12,6 +12,16 @@ public class Teacher extends  User{
     public Teacher() {
     }
 
+    public Teacher(String name, String firstLastName, String secondLastName, String institutionalEmail, int personalNumber, String alternativeEmail, String birthdate) {
+        this.name = name;
+        this.firstLastName = firstLastName;
+        this.secondLastName = secondLastName;
+        this.institutionalEmail = institutionalEmail;
+        this.personalNumber = personalNumber;
+        this.alternativeEmail = alternativeEmail;
+        this.birthdate = birthdate;
+    }
+
     public Teacher(int idUser, String username, String password, int idTeacher, int idAdministrativeStaff,
                    int userType, int responseCode, String name, String firstLastName, String secondLastName,
                    String institutionalEmail, int personalNumber, String alternativeEmail, String birthdate) {
